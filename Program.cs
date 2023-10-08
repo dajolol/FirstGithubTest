@@ -1,4 +1,6 @@
-﻿class Program
+﻿using System.Runtime.CompilerServices;
+
+class Program
 {
     static void Main()
     {
@@ -6,7 +8,7 @@
 
         Console.WriteLine("Fråga 1: Vilket är huvudstaden i Frankrike?");
 
-        string svar = Console.ReadLine();
+        string svar = Console.ReadLine().ToLower();
 
         if (svar == "paris")
         {
@@ -16,6 +18,19 @@
         {
             Console.WriteLine("Fel!");
         }
+
+        svar = Console.ReadLine().ToLower();
+
+        if (svar == "mars")
+        {
+            Console.WriteLine("Rätt!");
+        }
+        else
+        {
+            Console.WriteLine("Fel!");
+        }
+
+
     }
 }
 
