@@ -35,6 +35,20 @@ class Program
             Console.WriteLine("Fel!");
         }
 
+        Console.WriteLine("Fråga 3: Vilken hundras är Lassie?");
+
+        svar = Console.ReadLine().ToLower();
+
+        if (svar == "collie")
+        {
+            Console.WriteLine("Rätt!");
+            poäng++;
+        }
+        else
+        {
+            Console.WriteLine("Fel!");
+        }
+
         Console.WriteLine($"Nu är quizet klart. Du fick {poäng} poäng.");
 
 
