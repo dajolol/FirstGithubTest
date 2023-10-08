@@ -4,6 +4,7 @@ class Program
 {
     static void Main()
     {
+        int poäng = 0;
         Console.WriteLine("Välkommen till Quizet!");
 
         Console.WriteLine("Fråga 1: Vilket är huvudstaden i Frankrike?");
@@ -13,22 +14,28 @@ class Program
         if (svar == "paris")
         {
             Console.WriteLine("Rätt!");
+            poäng++;
         }
         else
         {
             Console.WriteLine("Fel!");
         }
+
+        Console.WriteLine("Fråga 2: Vilken brukar kallas för den röda planeten?");
 
         svar = Console.ReadLine().ToLower();
 
         if (svar == "mars")
         {
             Console.WriteLine("Rätt!");
+            poäng++;
         }
         else
         {
             Console.WriteLine("Fel!");
         }
+
+        Console.WriteLine($"Nu är quizet klart. Du fick {poäng} poäng.");
 
 
     }
