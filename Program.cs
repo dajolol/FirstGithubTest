@@ -7,16 +7,16 @@ class Program
         int poäng = 0;
         Console.WriteLine("Välkommen till Quizet!");
 
-        AskQuestions("Fråga 1: Vilket är huvudstaden i Frankrike?", "paris", ref poäng); // fråga 1
-        AskQuestions("Fråga 2: Vilken brukar kallas för den röda planeten?", "mars", ref poäng); // fråga 2
-        AskQuestions("Fråga 3: Vilken hundras är Lassie?", "collie", ref poäng); // fråga 3
+        AskQuestions("Fråga 1: Vilket är huvudstaden i Frankrike?", "paris", ref poäng);
+        AskQuestions("Fråga 2: Vilken brukar kallas för den röda planeten?", "mars", ref poäng);
+        AskQuestions("Fråga 3: Vilken hundras är Lassie?", "collie", ref poäng);
 
         //Console.WriteLine("Fråga 4: Skriv in en siffra som delat med 10 ska bli 5", ); // fråga 4
 
         Console.WriteLine($"Nu är quizet klart. Du fick {poäng} poäng.");
     }
 
-    static int AskQuestions(string fråga, string svaretPåFrågan, ref int currentPoints)
+    static int AskQuestions(string fråga, string svaretPåFrågan, ref int Points)
     {
         Console.WriteLine(fråga);
 
@@ -25,13 +25,13 @@ class Program
         if (svar.ToLower() == svaretPåFrågan)
         {
             Console.WriteLine("Rätt!");
-            currentPoints++;
-            return currentPoints;
+            Points++;
+            return Points;
         }
         else
         {
             Console.WriteLine("Fel!");
-            return currentPoints;
+            return Points;
         }
     }
 }
