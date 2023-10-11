@@ -7,52 +7,31 @@ class Program
         int poäng = 0;
         Console.WriteLine("Välkommen till Quizet!");
 
-        Console.WriteLine("Fråga 1: Vilket är huvudstaden i Frankrike?");
-        string svar = Console.ReadLine().ToLower();
+        AskQuestions("Fråga 1: Vilket är huvudstaden i Frankrike?", "paris"); // fråga 1
 
-        if (svar == "paris")
-        {
-            Console.WriteLine("Rätt!");
-            poäng++;
-        }
-        else
-        {
-            Console.WriteLine("Fel!");
-        }
+        AskQuestions("Fråga 2: Vilken brukar kallas för den röda planeten?", "mars"); // fråga 2
 
-        Console.WriteLine("Fråga 2: Vilken brukar kallas för den röda planeten?");
-        svar = Console.ReadLine().ToLower();
+        AskQuestions("Fråga 3: Vilken hundras är Lassie?", "collie"); // fråga 3
 
-        if (svar == "mars")
-        {
-            Console.WriteLine("Rätt!");
-            poäng++;
-        }
-        else
-        {
-            Console.WriteLine("Fel!");
-        }
-
-        Console.WriteLine("Fråga 3: Vilken hundras är Lassie?");
-        svar = Console.ReadLine().ToLower();
-
-        if (svar == "collie")
-        {
-            Console.WriteLine("Rätt!");
-            poäng++;
-        }
-        else
-        {
-            Console.WriteLine("Fel!");
-        }
-
-        Console.WriteLine("Skriv in en siffra som delat med 10 ska bli 5");
-        svar = Console.ReadLine();
-
+        //Console.WriteLine("Fråga 4: Skriv in en siffra som delat med 10 ska bli 5", ); // fråga 4
 
         Console.WriteLine($"Nu är quizet klart. Du fick {poäng} poäng.");
+    }
 
+    static void AskQuestions(string fråga, string svaretPåFrågan)
+    {
+        Console.WriteLine(fråga);
 
+        string svar = Console.ReadLine();
+
+        if (svar.ToLower() == svaretPåFrågan)
+        {
+            Console.WriteLine("Rätt!");
+        }
+        else
+        {
+            Console.WriteLine("Fel!");
+        }
     }
 }
 
