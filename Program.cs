@@ -49,25 +49,6 @@ class Program
         Console.WriteLine("Skriv in en siffra som delat med 10 ska bli 5");
         svar = Console.ReadLine();
 
-        //double svarsomnummer = double.Parse(svar); // sträng 50 --> int 50
-        double svarsomnummer = 0;
-
-        if (double.TryParse(svar, out svarsomnummer))
-        {
-            if (svarsomnummer == 50)
-            {
-                Console.WriteLine("Rätt!");
-                poäng++;
-            }
-            else
-            {
-                Console.WriteLine($"Fel! Ditt svar blev inte 5, ditt svar blev {svarsomnummer / 10}.");
-            }
-        }
-        else
-        {
-            Console.WriteLine("Fel! Du skrev inte ens en siffra...");
-        }
 
         Console.WriteLine($"Nu är quizet klart. Du fick {poäng} poäng.");
 
